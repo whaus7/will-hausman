@@ -1,26 +1,102 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --spacing: 5px;
 }
 
-@theme inline {
+:root {
+  --light: #ffffff;
+  --dark: #171717;
+}
+
+header {
+  position: fixed;
+  margin-inline: auto;
+  top: 0;
+  background: rgb(255, 255, 255, 0.8);
+  /* filter: blur(8px); */
+}
+
+.darkMode header {
+  background: rgb(23, 23, 23, 0.8);
+}
+
+/* @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
+} */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--light);
+  color: var(--dark);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+body.darkMode {
+  background: var(--dark);
+  color: var(--light);
+}
+
+.svgIcon:hover {
+  cursor: pointer;
+}
+
+@keyframes shine {
+  from {
+    transform: translate(0px, 0px);
+  }
+  to {
+    transform: translate(10px, 10px);
+  }
+}
+
+@keyframes shine-scale {
+  0% {
+    scale: 0.42;
+  }
+  50% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes sun-scale {
+  0% {
+    scale: 0.8;
+  }
+  50% {
+    scale: 1.1;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+.sun-icon {
+  /* overflow: visible; */
+
+  /* &:hover {
+    .sun-icon-shine {
+      transform-origin: center center;
+      animation-duration: 400ms;
+      animation-name: shine-scale;
+    }
+
+    .sun-circle {
+      transform-origin: center center;
+      animation-duration: 400ms;
+      animation-name: sun-scale;
+    }
+  } */
 }
