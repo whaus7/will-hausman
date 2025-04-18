@@ -9,9 +9,9 @@ const Boop = ({ children, boopConfig }) => {
   const [style, trigger] = useBoop(boopConfig)
 
   return (
-    <animated.div onMouseEnter={trigger} style={style}>
+    <animated.g onMouseEnter={trigger} style={style}>
       {children}
-    </animated.div>
+    </animated.g>
   )
 }
 

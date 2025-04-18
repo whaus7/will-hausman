@@ -7,26 +7,29 @@ export default function useBoop({
   x = 0,
   y = 0,
   rotation = 0,
-  scale = 1,
+  scaleX = 1,
+  scaleY = 1,
   timing = 150,
   springConfig = {
-    tension: 300,
-    friction: 10,
+    tension: 200,
+    friction: 2,
   },
+  transformOrigin = 'center center'
 }) {
   const [isBooped, setIsBooped] = React.useState(false)
 
   const style = useSpring({
     display: 'inline-block',
     backfaceVisibility: 'hidden',
-    //transformOrigin: 'center center',
+    transformOrigin: transformOrigin, // TODO this needs to be a param
+    transformBox: 'fill-box',
     transform: isBooped
       ? `translate(${x}px, ${y}px)
          rotate(${rotation}deg)
-         scale(${scale})`
-      : `translate(0px, 0px)
+         scale(${scaleX}, ${scaleY})`
+      : `translate(${x}px, ${y}px)
          rotate(0deg)
-         scale(1)`,
+         scale(${scaleX}, ${scaleY})`,
 
     config: springConfig,
   })

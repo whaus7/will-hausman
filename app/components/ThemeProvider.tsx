@@ -1,6 +1,6 @@
 'use client'
 
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Geist, Geist_Mono, Comfortaa, Noto_Sans } from 'next/font/google'
 import { useAppSelector } from '@/lib/hooks'
 import { selectDarkmode } from '@/lib/features/darkmode/darkmodeSlice'
 
@@ -14,6 +14,9 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 })
 
+const comfortaa = Comfortaa()
+const noto = Noto_Sans()
+
 interface ReactChildren {
   readonly children: React.ReactNode
 }
@@ -23,9 +26,8 @@ export default function ThemeProvider({ children }: ReactChildren) {
 
   return (
     <body
-      className={`${geistSans.variable} ${geistMono.variable} ${
-        darkmode ? 'darkMode' : 'lightMode'
-      } antialiased`}
+      className={`${noto.className} ${darkmode ? 'darkMode' : 'lightMode'
+        } antialiased`}
     >
       {children}
     </body>

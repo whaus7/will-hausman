@@ -3,41 +3,6 @@ export default function About() {
     <div className="w-full max-w-[900]">
       <div>about me</div>
       <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
-      <div>wow much content</div>
     </div>
   )
 }
