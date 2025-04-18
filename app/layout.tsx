@@ -6,8 +6,6 @@ import ThemeProvider from '@/app/components/ThemeProvider'
 import Header from '@/app/components/header/Header'
 import HeroCanvas from '@/app/components/hero/HeroCanvas'
 import Mountains from '@/app/components/hero/Mountains'
-import Boop from '@/app/components/Boop'
-import Sun from '@/app/components/svg_icons/Sun'
 
 export const metadata: Metadata = {
   title: 'Create Next App',

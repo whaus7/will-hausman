@@ -4,6 +4,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 import { useAppSelector } from '@/lib/hooks'
 import { selectDarkmode } from '@/lib/features/darkmode/darkmodeSlice'
+import build from 'next/dist/build'
 
 const CanvasComponent = (props) => {
   const radius = 15;
