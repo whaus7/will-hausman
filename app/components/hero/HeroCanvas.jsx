@@ -75,7 +75,7 @@ const CanvasComponent = (props) => {
     let arr = []
     for (let i = 0; i < 25; i++) {
       for (let k = 0; k < window.innerWidth / 38; k++) {
-        let offSet = k * 39;
+        let offSet = k * 38;
 
         arr.push(new Hexagon(i % 2 ? offSet : offSet + 17, i * 13))
       }
