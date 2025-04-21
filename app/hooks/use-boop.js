@@ -14,7 +14,7 @@ export default function useBoop({
     tension: 200,
     friction: 2,
   },
-  transformOrigin = 'center center'
+  transformOrigin = 'center center',
 }) {
   const [isBooped, setIsBooped] = React.useState(false)
 

@@ -1,8 +1,8 @@
 .mountains {
-    width: 3000px;
-    height: 595px;
+  width: 3000px;
+  height: 595px;
 }
 
 .mountain {
-    transition: fill .8s ease;
+  transition: fill 0.8s ease;
 }

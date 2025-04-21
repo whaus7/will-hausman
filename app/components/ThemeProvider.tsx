@@ -22,8 +22,9 @@ export default function ThemeProvider({ children }: ReactChildren) {
 
   return (
     <body
-      className={`${noto.className} ${darkmode ? 'darkMode' : 'lightMode'
-        } antialiased`}
+      className={`${noto.className} ${
+        darkmode ? 'darkMode' : 'lightMode'
+      } antialiased`}
     >
       {children}
     </body>
