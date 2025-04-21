@@ -95,7 +95,6 @@ const CanvasComponent = (props) => {
 
     let delta = (timestamp - prevTimestamp.current) / 1000
     prevTimestamp.current = timestamp
-    //console.log('time lapses: ' + (timeLapsed))
 
     //ctx.globalCompositeOperation = 'destination-over'
     ctx.clearRect(0, 0, canvasWidth, canvasHeight) // clear canvas
