@@ -9,6 +9,24 @@ export default function About() {
       <div>wow much content</div>
       <div>wow much content</div>
       <div>wow much content</div>
+      <div>wow much content</div>
+      <div>wow much content</div>
+      <div>wow much content</div>
+      <div>wow much content</div>
+      <div>wow much content</div>
+      <div>wow much content</div>
+      <div>wow much content</div>
+      <div>wow much content</div>
+      <div>wow much content</div>
+      <div>wow much content</div>
+      <div>wow much content</div>
+      <div>wow much content</div>
+      <div>wow much content</div>
+      <div>wow much content</div>
+      <div>wow much content</div>
+      <div>wow much content</div>
+      <div>wow much content</div>
+      <div>wow much content</div>
     </div>
   )
 }
