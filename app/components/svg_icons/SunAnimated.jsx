@@ -6,6 +6,7 @@ import { animated } from 'react-spring'
 export default function SunAnimated() {
   const [isHovered, setIsHovered] = useState(false)
   const timing = 400
+  const strokeColor = '#fbffbf'
 
   useEffect(() => {
     if (!isHovered) {
@@ -44,8 +45,9 @@ export default function SunAnimated() {
         className="sun-circle"
         style={{
           transformOrigin: 'center center',
-          transform: isHovered ? `scale(1.3)` : `scale(1)`,
+          transform: isHovered ? `scale(2.1)` : `scale(1.8)`,
           transition: `transform ${timing}ms`,
+          stroke: strokeColor,
         }}
       >
         <circle cx="12" cy="12" r="4" />
@@ -54,8 +56,9 @@ export default function SunAnimated() {
         className="sun-icon-shine"
         style={{
           transformOrigin: 'center center',
-          transform: isHovered ? `scale(1.6)` : `scale(1)`,
+          transform: isHovered ? `scale(2.4)` : `scale(1.8)`,
           transition: `transform ${timing}ms`,
+          stroke: strokeColor,
         }}
       >
         <path d="M12 2v2" />

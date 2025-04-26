@@ -7,6 +7,7 @@ import { selectDarkmode } from '@/lib/features/darkmode/darkmodeSlice'
 
 const CanvasComponent = (props) => {
   const radius = 15
+  const hitBox = 15
 
   const pathname = usePathname()
 
@@ -46,9 +47,9 @@ const CanvasComponent = (props) => {
     buildBackground()
   }, [])
 
-  useEffect(() => {
-    resizeCanvas()
-  }, [pathname])
+  // useEffect(() => {
+  //   resizeCanvas()
+  // }, [pathname])
 
   // Draw loop, re-render if darkmode, size changes or animate start/pause
   useEffect(() => {
@@ -106,6 +107,9 @@ const CanvasComponent = (props) => {
       grad.addColorStop(1, 'rgb(255, 140, 0)')
       grad.addColorStop(0.5, 'rgb(191, 45, 0)')
       grad.addColorStop(0, 'rgb(20, 21, 22')
+
+      // grad.addColorStop(1, 'rgb(212, 85, 0)')
+      // grad.addColorStop(0, 'rgb(20, 21, 22')
     } else {
       grad.addColorStop(1, 'rgb(255, 255, 255)')
       grad.addColorStop(0, 'rgb(101, 170, 255')
@@ -194,10 +198,10 @@ const CanvasComponent = (props) => {
 
       // Mouse reactivity - scaling
       if (
-        mouseX.current - this.x < 20 &&
-        mouseX.current - this.x > -20 &&
-        mouseY.current - (this.y - window.scrollY) < 20 &&
-        mouseY.current - (this.y - window.scrollY) > -20
+        mouseX.current - this.x < hitBox &&
+        mouseX.current - this.x > -hitBox &&
+        mouseY.current - (this.y - window.scrollY) < hitBox &&
+        mouseY.current - (this.y - window.scrollY) > -hitBox
       ) {
         if (this.radius > 0 && !this.hovered) {
           this.hovered = true
@@ -209,9 +213,9 @@ const CanvasComponent = (props) => {
       }
 
       if (!this.hovered && this.radius < radius) {
-        this.radius += 0.5
+        this.radius += 0.4
       } else if (this.hovered && this.radius > 0) {
-        this.radius -= 0.5
+        this.radius -= 0.4
       }
 
       this.draw()

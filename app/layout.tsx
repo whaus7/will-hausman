@@ -6,6 +6,7 @@ import ThemeProvider from '@/app/components/ThemeProvider'
 import Header from '@/app/components/header/Header'
 import HeroCanvas from '@/app/components/hero/HeroCanvas'
 import Mountains from '@/app/components/hero/Mountains'
+import Footer from './components/footer/Footer'
 
 export const metadata: Metadata = {
   title: 'Will Hausman',
@@ -32,9 +33,13 @@ export default function RootLayout({ children }: ReactChildren) {
               </div>
             </div>
 
+            {/* TODO move h1 to here and get title from path for fade effect */}
+
             <div className="flex p-5 justify-center w-full mt-[-50]">
               <div className="w-full max-w-[900]">{children}</div>
             </div>
+
+            <Footer />
           </div>
         </ThemeProvider>
       </html>

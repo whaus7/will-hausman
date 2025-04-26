@@ -15,18 +15,34 @@ header {
   /* mask-image: linear-gradient(to right,
       white 30%,
       transparent); */
+
   backdrop-filter: blur(5px);
   transition: background-color 0.8s ease;
-  position: fixed;
+  position: absolute;
   margin-inline: auto;
   top: 0;
 }
 
 h1 {
   text-align: center;
-  width: 900px;
-  font-size: 30px;
+  font-size: 32px;
+  color: #ffffff;
   transform: translateY(-150px);
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-weight: 500;
+}
+
+h2 {
+  color: #31d38d;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+p {
+  margin: 25px 0;
 }
 
 .darkMode header {

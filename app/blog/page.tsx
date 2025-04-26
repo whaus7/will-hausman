@@ -9,7 +9,7 @@ export default function Blog() {
   return (
     <div className="w-full max-w-[900]">
       <h1>{`${metadata.title}`}</h1>
-      <div>first blog</div>
+      <h2>The power of SVG's and CSS</h2>
       <div>first blog</div>
       <div>first blog</div>
       <div>first blog</div>

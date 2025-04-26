@@ -1,6 +1,6 @@
-import MainNav from '@/app/components/MainNav'
+import MainNav from '@/app/components/header/MainNav'
 import Link from 'next/link'
-import DarkModeBtn from '@/app/components/DarkModeBtn'
+import DarkModeBtn from '@/app/components/svg_icons/DarkModeBtn'
 import styles from '@/app/components/header/Header.module.css'
 
 export default function Header() {

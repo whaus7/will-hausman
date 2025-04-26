@@ -15,15 +15,17 @@ export default function Mountains() {
   console.log('pathname: ' + pathname)
 
   const scrollPos = (pathname, layer) => {
-    let baseScroll = 100
-    const scrollDistance = baseScroll + layer * 50
+    let baseScroll = 50
+    const scrollDistance = layer * 50
 
     switch (pathname) {
       case '/':
         return `0px`
-      case '/about':
-        return `-${scrollDistance}px`
       case '/blog':
+        return `-${scrollDistance}px`
+      case '/contact':
+        return `${scrollDistance + baseScroll}px`
+      default:
         return `${scrollDistance}px`
     }
   }
@@ -34,7 +36,8 @@ export default function Mountains() {
       className={styles.mountains}
       //width={3000} height={300}
       viewBox="0 0 3000 400"
-      style={{ zIndex: 2, marginTop: 33 }}
+      //style={{ zIndex: 2, marginTop: 33 }}
+      style={{ zIndex: 2 }}
     >
       {/* Sky */}
       {/* <rect x="5.969" y="-42.493" width="1017.46" height="134.648"
