@@ -1,18 +1,11 @@
 import { StoreProvider } from '@/app/StoreProvider'
 
-import type { Metadata } from 'next'
 import '@/app/globals.css'
 import ThemeProvider from '@/app/components/ThemeProvider'
 import Header from '@/app/components/header/Header'
 import HeroCanvas from '@/app/components/hero/HeroCanvas'
 import Mountains from '@/app/components/hero/Mountains'
 import Footer from '@/app/components/footer/Footer'
-// import Title from '@/app/components/Title'
-
-// export const metadata: Metadata = {
-//   title: 'Will Hausman',
-//   description: 'My personal website',
-// }
 
 interface ReactChildren {
   readonly children: React.ReactNode
