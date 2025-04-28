@@ -31,33 +31,36 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 6px;
   font-weight: 500;
+  animation: fadeText 1.5s;
 }
 
 h2 {
-  color: #31d38d;
-  font-size: 22px;
+  color: #219b8c;
+  font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 700;
+  animation: fadeText 1.5s;
+}
+
+.darkMode h2 {
+  color: #31d38d;
 }
 
 p {
   margin: 25px 0;
+  animation: fadeText 1.5s;
 }
 
-.darkMode header {
-  /* background-image: linear-gradient(rgba(20, 21, 22, 1), rgba(0, 0, 0, 0)); */
-  /* background: rgb(23, 23, 23, 0.2); */
-}
+@keyframes fadeText {
+  0% {
+    opacity: 0;
+  }
 
-/* #hero {
-  transition: background-color .8s ease;
-  background: #A0DAE2;
+  100% {
+    opacity: 1;
+  }
 }
-
-.darkMode #hero {
-  background: #050531;
-} */
 
 /* @theme inline {
   --color-background: var(--background);
@@ -77,7 +80,6 @@ body {
   background-color: var(--light);
   transition: background-color 0.8s ease;
   color: var(--dark);
-  /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 body.darkMode {
@@ -87,60 +89,4 @@ body.darkMode {
 
 .svgIcon:hover {
   cursor: pointer;
-}
-
-@keyframes shine {
-  from {
-    transform: translate(0px, 0px);
-  }
-
-  to {
-    transform: translate(10px, 10px);
-  }
-}
-
-@keyframes shine-scale {
-  0% {
-    scale: 0.42;
-  }
-
-  50% {
-    scale: 1.2;
-  }
-
-  100% {
-    scale: 1;
-  }
-}
-
-@keyframes sun-scale {
-  0% {
-    scale: 0.8;
-  }
-
-  50% {
-    scale: 1.1;
-  }
-
-  100% {
-    scale: 1;
-  }
-}
-
-.sun-icon {
-  /* overflow: visible; */
-
-  /* &:hover {
-    .sun-icon-shine {
-      transform-origin: center center;
-      animation-duration: 400ms;
-      animation-name: shine-scale;
-    }
-
-    .sun-circle {
-      transform-origin: center center;
-      animation-duration: 400ms;
-      animation-name: sun-scale;
-    }
-  } */
 }

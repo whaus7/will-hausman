@@ -1,7 +1,5 @@
 import type { Metadata } from 'next'
 
-import React from 'react'
-
 export const metadata: Metadata = {
   title: 'Prologue',
   description: 'My personal website',
@@ -20,39 +18,10 @@ export default function Home() {
         to teach myself web development instead
       </p>
 
-      <p>conmtent</p>
-      <div>conmtent</div>
-      <div>conmtent</div>
-      <div>conmtent</div>
-      <div>conmtent</div>
-      <div>conmtent</div>
-      <div>conmtent</div>
-      <div>conmtent</div>
-      <div>conmtent</div>
-      <div>conmtent</div>
-      <div>conmtent</div>
-      <div>conmtent</div>
-      <div>conmtent</div>
-      <div>conmtent</div>
-      <div>conmtent</div>
-      <div>conmtent</div>
-      <div>conmtent</div>
-      <div>conmtent</div>
-      <div>conmtent</div>
-      <div>conmtent</div>
-      <div>conmtent</div>
-      <div>conmtent</div>
-      <div>conmtent</div>
-      <div>conmtent</div>
-      <div>conmtent</div>
-      <div>conmtent</div>
-      <div>conmtent</div>
-      <div>conmtent</div>
-      <div>conmtent</div>
-      <div>conmtent</div>
-      <div>conmtent</div>
-      <div>conmtent</div>
-      <div>conmtent</div>
+      <p>content content content content content content content content </p>
+      <p>content content content content content content content content </p>
+      <p>content content content content content content content content </p>
+      <p>content content content content content content content content </p>
     </div>
   )
 }

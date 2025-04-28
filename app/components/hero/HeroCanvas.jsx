@@ -60,6 +60,7 @@ const CanvasComponent = (props) => {
     }
   }, [darkMode, size, animate])
 
+  // Larger hexagons
   // function buildBackground() {
   //   let arr = []
   //   for (let i = 0; i < 17; i++) {

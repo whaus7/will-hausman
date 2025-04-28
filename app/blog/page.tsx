@@ -10,34 +10,26 @@ export default function Blog() {
     <div className="w-full max-w-[900]">
       <h1>{`${metadata.title}`}</h1>
       <h2>The power of SVG&apos;s and CSS</h2>
-      <div>first blog</div>
-      <div>first blog</div>
-      <div>first blog</div>
-      <div>first blog</div>
-      <div>first blog</div>
-      <div>first blog</div>
-      <div>first blog</div>
-      <div>first blog</div>
-      <div>first blog</div>
-      <div>first blog</div>
-      <div>first blog</div>
-      <div>first blog</div>
-      <div>first blog</div>
-      <div>first blog</div>
-      <div>first blog</div>
-      <div>first blog</div>
-      <div>first blog</div>
-      <div>first blog</div>
-      <div>first blog</div>
-      <div>first blog</div>
-      <div>first blog</div>
-      <div>first blog</div>
-      <div>first blog</div>
-      <div>first blog</div>
-      <div>first blog</div>
-      <div>first blog</div>
-      <div>first blog</div>
-      <div>first blog</div>
+      <p>
+        blog content blog content blog content blog content blog content blog
+        content blog content blog content
+      </p>
+      <p>
+        blog content blog content blog content blog content blog content blog
+        content blog content blog content
+      </p>
+      <p>
+        blog content blog content blog content blog content blog content blog
+        content blog content blog content
+      </p>
+      <p>
+        blog content blog content blog content blog content blog content blog
+        content blog content blog content
+      </p>
+      <p>
+        blog content blog content blog content blog content blog content blog
+        content blog content blog content
+      </p>
     </div>
   )
 }
