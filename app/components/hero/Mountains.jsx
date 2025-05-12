@@ -8,13 +8,29 @@ import Tree from '@/app/components/hero/Tree'
 import trees from '@/app/components/hero/trees'
 import Boop from '@/app/components/Boop'
 import Sun from '@/app/components/svg_icons/Sun'
+import { useCallback, useMemo } from 'react'
+
+const MOUNTAIN_COLORS = {
+  dark: {
+    layer1: 'rgb(16, 25, 78)',
+    layer2: 'rgb(27, 55, 112)',
+    layer3: 'rgb(37, 93, 159)',
+    hills: 'rgb(50, 147, 105)',
+  },
+  light: {
+    layer1: 'rgb(0, 122, 106)',
+    layer2: 'rgb(5, 136, 124)',
+    layer3: 'rgb(33, 155, 140)',
+    hills: 'rgb(112, 193, 112)',
+  },
+}
 
 export default function Mountains() {
   const darkmode = useAppSelector(selectDarkmode)
   const pathname = usePathname()
   console.log('pathname: ' + pathname)
 
-  const scrollPos = (pathname, layer) => {
+  const scrollPos = useCallback((pathname, layer) => {
     let baseScroll = 50
     const scrollDistance = layer * 50
 
@@ -28,7 +44,27 @@ export default function Mountains() {
       default:
         return `${scrollDistance}px`
     }
-  }
+  }, [])
+
+  const treeElements = useMemo(
+    () =>
+      trees.map((tree, i) => (
+        <Boop
+          key={`tree${i}`}
+          boopConfig={{
+            x: tree.x,
+            y: tree.y,
+            rotation: tree.rotation,
+            scaleX: tree.scaleX,
+            scaleY: tree.scaleY,
+            transformOrigin: 'bottom center',
+          }}
+        >
+          <Tree />
+        </Boop>
+      )),
+    []
+  )
 
   return (
     <svg
@@ -51,7 +87,9 @@ export default function Mountains() {
       <path
         className={styles.mountain}
         style={{
-          fill: darkmode ? 'rgb(16, 25, 78)' : 'rgb(0, 122, 106)',
+          fill: darkmode
+            ? MOUNTAIN_COLORS.dark.layer1
+            : MOUNTAIN_COLORS.light.layer1,
           transition: 'transform 1s ease',
           transform: `translateX(${scrollPos(pathname, 1)}) scale(3.0)`,
         }}
@@ -63,7 +101,9 @@ export default function Mountains() {
         style={{
           //paintOrder: 'fill',
           fillRule: 'nonzero',
-          fill: darkmode ? 'rgb(27, 55, 112)' : 'rgb(5, 136, 124)',
+          fill: darkmode
+            ? MOUNTAIN_COLORS.dark.layer2
+            : MOUNTAIN_COLORS.light.layer2,
           transition: 'transform 1s ease',
           transform: `translateX(${scrollPos(pathname, 2)}) scale(3.0)`,
         }}
@@ -73,7 +113,9 @@ export default function Mountains() {
       <path
         className={styles.mountain}
         style={{
-          fill: darkmode ? 'rgb(37, 93, 159)' : 'rgb(33, 155, 140)',
+          fill: darkmode
+            ? MOUNTAIN_COLORS.dark.layer3
+            : MOUNTAIN_COLORS.light.layer3,
           transition: 'transform 1s ease',
           transform: `translateX(${scrollPos(pathname, 3)}) scale(3.0)`,
         }}
@@ -87,23 +129,7 @@ export default function Mountains() {
           transform: `translateX(${scrollPos(pathname, 4)})`,
         }}
       >
-        {trees.map((tree, i) => {
-          return (
-            <Boop
-              key={`tree${i}`}
-              boopConfig={{
-                x: tree.x,
-                y: tree.y,
-                rotation: tree.rotation,
-                scaleX: tree.scaleX,
-                scaleY: tree.scaleY,
-                transformOrigin: 'bottom center',
-              }}
-            >
-              <Tree />
-            </Boop>
-          )
-        })}
+        {treeElements}
       </g>
 
       {/* rolling hills */}
@@ -113,7 +139,9 @@ export default function Mountains() {
           transition: 'transform 1s ease',
           transform: `translateX(${scrollPos(pathname, 4)}) scale(3.0)`,
           //scale: 3,
-          fill: darkmode ? 'rgb(50, 147, 105)' : 'rgb(112, 193, 112)',
+          fill: darkmode
+            ? MOUNTAIN_COLORS.dark.hills
+            : MOUNTAIN_COLORS.light.hills,
         }}
         d="M 5.114 112.431 C 5.114 112.431 41.508 116.65 61.391 123.73 C 88.907 133.529 121.616 130.804 151.479 135.956 C 197.694 143.929 255.486 169.118 289.176 164.841 C 331.383 159.483 334.189 141.986 375.246 139.854 C 405.595 138.278 424.239 149.12 447.141 148.366 C 477.615 147.363 495.521 136.83 533.82 140.151 C 565.366 142.887 655.941 166.229 712.217 163.54 C 759.753 161.268 812.448 145.599 852.882 146.098 C 890.155 146.559 923.887 143.674 949.522 135.271 C 990.275 121.913 1023.29 117.284 1023.29 117.284 L 1023.4 97.509 C 1023.4 97.509 973.276 99.345 921.167 95.841 C 874.458 92.7 826.388 84.234 797.298 83.362 C 765.481 82.409 748.458 87.162 716.783 84.414 C 690.346 82.12 680.131 68.85 653.594 67.685 C 628.491 66.584 624.595 70.313 595.388 78.519 C 557.184 89.254 555.004 86.229 534.485 88.442 C 504.237 91.704 463.82 88.629 433.342 89.212 C 396.291 89.921 368.857 98.984 331.847 97.322 C 302.966 96.024 273.347 99.006 244.915 94.45 C 231.15 92.245 218.729 85.428 204.935 83.362 C 187.128 80.696 168.771 80.749 150.741 81.833 C 116.257 83.905 83.125 96.281 48.571 97.127 C 34.416 97.474 5.493 92.921 5.493 92.921 L 5.114 112.431 Z"
       />

@@ -12,7 +12,13 @@ export default function Blog() {
       <h2>The power of SVG&apos;s and CSS</h2>
       <p>
         blog content blog content blog content blog content blog content blog
-        content blog content blog content
+        content blog content blog content blog content blog content blog content
+        blog content blog content blog content blog content blog contentblog
+        content blog content blog content blog content blog content blog content
+        blog content blog content blog content blog content blog content blog
+        content blog content blog content blog content blog content blog content
+        blog content blog content blog content blog content blog content blog
+        content blog content
       </p>
       <p>
         blog content blog content blog content blog content blog content blog
