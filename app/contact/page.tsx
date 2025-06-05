@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { MailIcon } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Get in Touch',

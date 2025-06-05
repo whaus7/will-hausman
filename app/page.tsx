@@ -24,14 +24,15 @@ export default function Home() {
       <p>
         I went to school for video game development. As graduation approached I
         was hearing endless negative stories about the industry. I decided to
-        teach myself web development instead. I've always enjoyed being on the
-        bleeding edge of the web to compete with apps. Most of my career has
+        teach myself web development instead. I&apos;ve always enjoyed being on
+        the bleeding edge of the web to compete with apps. Most of my career has
         been building out features for dashboards.
       </p>
 
       <p>
-        This site is an homage to SVG's and the &lt;canvas /&gt; tag which is
-        two things ive always wanted to explore in detail during my dev career.
+        This site is an homage to SVG&apos;s and the &lt;canvas /&gt; tag which
+        is two things ive always wanted to explore in detail during my dev
+        career.
       </p>
     </div>
   )
