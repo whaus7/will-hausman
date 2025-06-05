@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { MailIcon } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Get in Touch',
@@ -7,10 +8,15 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <div className="w-full max-w-[900]">
+    <div className="w-full max-w-[900] text-center">
       <h1>{`${metadata.title}`}</h1>
 
-      <p>contact me</p>
+      <p>I'm always looking to build something interesting.</p>
+
+      <a href="mailto:whaus.web@gmail.com">whaus.web@gmail.com</a>
+
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
     </div>
   )
 }

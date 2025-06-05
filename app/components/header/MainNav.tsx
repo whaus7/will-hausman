@@ -2,8 +2,8 @@ import Link from 'next/link'
 
 const menuLinks = [
   {
-    text: 'Blog',
-    url: 'blog',
+    text: 'About',
+    url: '/',
   },
   {
     text: 'Contact',

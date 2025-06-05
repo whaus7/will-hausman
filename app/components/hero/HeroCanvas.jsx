@@ -35,16 +35,30 @@ const CanvasComponent = (props) => {
 
   // Run once on mount, setup the <Canvas>
   useEffect(() => {
+    // Get canvas context once on mount
     ctxRef.current = canvasRef.current.getContext('2d')
-    window.addEventListener('resize', resizeCanvas, false)
-    window.addEventListener('mousemove', (e) => {
+
+    // Handler for mouse movement
+    const handleMouseMove = (e) => {
       mouseX.current = e.clientX
       mouseY.current = e.clientY
       setAnimate(true)
       clearTimeout(mouseMoveTimer.current)
-    })
+    }
+
+    // Add event listeners
+    window.addEventListener('resize', resizeCanvas)
+    window.addEventListener('mousemove', handleMouseMove)
+
+    // Initial setup
     resizeCanvas()
     buildBackground()
+
+    // Cleanup event listeners on unmount
+    return () => {
+      window.removeEventListener('resize', resizeCanvas)
+      window.removeEventListener('mousemove', handleMouseMove)
+    }
   }, [])
 
   // useEffect(() => {
