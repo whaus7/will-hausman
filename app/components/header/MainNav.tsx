@@ -1,13 +1,18 @@
 import Link from 'next/link'
 
-const menuLinks = [
+interface MenuLink {
+  text: string
+  url: string
+}
+
+const menuLinks: MenuLink[] = [
   {
     text: 'About',
     url: '/',
   },
   {
     text: 'Contact',
-    url: 'contact',
+    url: '/contact',
   },
 ]
 
