@@ -26,12 +26,17 @@ header {
 h1 {
   text-align: center;
   font-size: 32px;
-  color: #ffffff;
+  color: #025a4c;
   transform: translateY(-150px);
   text-transform: uppercase;
   letter-spacing: 6px;
   font-weight: 500;
   animation: fadeText 1.5s;
+  transition: color 0.8s ease;
+}
+
+.darkMode h1 {
+  color: var(--light);
 }
 
 h2 {
