@@ -90,3 +90,172 @@ body.darkMode {
 .svgIcon:hover {
   cursor: pointer;
 }
+
+/* Portfolio Styles */
+.portfolio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  animation: fadeText 1.5s;
+}
+
+.portfolio-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portfolio-intro p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.portfolio-tile {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+}
+
+.darkMode .portfolio-tile {
+  background: rgba(23, 23, 23, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.portfolio-tile:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-color: rgba(33, 155, 140, 0.3);
+}
+
+.darkMode .portfolio-tile:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: rgba(49, 211, 141, 0.3);
+}
+
+.tile-image-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.tile-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.tile-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-tile:hover .tile-overlay {
+  opacity: 1;
+}
+
+.visit-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid white;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.tile-content {
+  padding: 1.5rem;
+}
+
+.tile-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem 0;
+  color: var(--dark);
+}
+
+.darkMode .tile-title {
+  color: var(--light);
+}
+
+.tile-description {
+  color: #666;
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.darkMode .tile-description {
+  color: #ccc;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  background: rgba(33, 155, 140, 0.1);
+  color: #219b8c;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid rgba(33, 155, 140, 0.2);
+}
+
+.darkMode .tech-tag {
+  background: rgba(49, 211, 141, 0.1);
+  color: #31d38d;
+  border: 1px solid rgba(49, 211, 141, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .portfolio-container {
+    padding: 1rem;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .tile-image-container {
+    height: 180px;
+  }
+
+  .tile-content {
+    padding: 1rem;
+  }
+
+  .portfolio-intro p {
+    font-size: 1rem;
+  }
+}

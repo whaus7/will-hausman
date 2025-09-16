@@ -7,7 +7,7 @@ interface MenuLink {
 
 const menuLinks: MenuLink[] = [
   {
-    text: 'About',
+    text: 'Portfolio',
     url: '/',
   },
   {
