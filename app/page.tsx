@@ -37,9 +37,9 @@ export default function Home() {
 
       <div className="portfolio-intro">
         <p>
-          Welcome to my developer portfolio. Here are some of the projects I've
-          worked on, ranging from agricultural data dashboards to SPA marketing
-          websites.
+          Welcome to my developer portfolio. Here are some of the projects
+          I&apos;ve worked on, ranging from agricultural data dashboards to SPA
+          marketing websites.
         </p>
       </div>
 
